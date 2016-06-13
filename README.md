@@ -1,8 +1,8 @@
-Database Challenge:
+<h1>Database Challenge:</h1>
 
 This task involves the creation of a web application which uses database technology. 
 
-USER STORIES: 
+<h2>USER STORIES:</h2> 
 
 ///
 
