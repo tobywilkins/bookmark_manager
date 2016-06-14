@@ -11,6 +11,7 @@ gem 'rspec-sinatra'
 gem 'sinatra'
 gem 'rerun'
 gem 'dm-transactions'
+gem 'rake'
 
 group :test do
   gem 'database_cleaner'
