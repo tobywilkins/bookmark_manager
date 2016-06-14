@@ -10,4 +10,8 @@ gem 'rspec'
 gem 'rspec-sinatra'
 gem 'sinatra'
 gem 'rerun'
+gem 'dm-transactions'
 
+group :test do
+  gem 'database_cleaner'
+end
