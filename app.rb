@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require './models/link'
 
+ENV["RACK_ENV"] ||= "development"
+
 class BookMarkM < Sinatra::Base
   get '/' do
     'Hello BookMarkM!'
@@ -19,7 +21,6 @@ class BookMarkM < Sinatra::Base
   get '/links/new' do
     erb :'links/links_new'
   end
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
