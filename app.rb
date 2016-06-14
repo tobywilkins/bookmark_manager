@@ -11,6 +11,15 @@ class BookMarkM < Sinatra::Base
     erb :'links/index'
   end
 
+  post '/links' do
+    Link.create(title: params[:title], url: params[:url])
+    redirect '/links'
+  end
+
+  get '/links/new' do
+    erb :'links/links_new'
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
