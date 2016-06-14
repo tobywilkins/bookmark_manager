@@ -1,7 +1,8 @@
+
+ENV['RACK_ENV'] = 'development'
+
 require 'sinatra/base'
 require './models/link'
-
-ENV["RACK_ENV"] ||= "development"
 
 class BookMarkM < Sinatra::Base
   get '/' do

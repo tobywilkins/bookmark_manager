@@ -1,5 +1,6 @@
+require 'sinatra/base'
 require 'data_mapper'
-require 'dm-postgres-adapter'
+
 
 class Link
   include DataMapper::Resource
@@ -9,6 +10,6 @@ class Link
     property :url,  String
 end
 
-DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV["RACK_ENV"]}")
+DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
 DataMapper.finalize
 DataMapper.auto_upgrade!
