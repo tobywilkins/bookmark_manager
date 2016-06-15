@@ -43,14 +43,9 @@ class BookMarkM < Sinatra::Base
   end
 
   post '/user/new' do
-    user = User.create(email: params[:email], password: params[:password])
+    user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
     session[:user_id] = user.id
-    redirect '/user/welcome'
-  end
-
-  get '/user/welcome' do
-    @user = User.get(session[:user_id])
-    erb :'user/welcome'
+    redirect '/links'
   end
 
   helpers do
